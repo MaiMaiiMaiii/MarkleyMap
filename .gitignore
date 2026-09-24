@@ -1,0 +1,18 @@
+# Downloaded source datasets
+/etopo.tif
+/land-color.zip
+
+# Reprojected intermediate cache
+/relief-cache/
+
+# Generated full-resolution output
+/markley-natural-color-16k.png
+
+# Local runtime artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+/node_modules/
+.DS_Store
+Thumbs.db
