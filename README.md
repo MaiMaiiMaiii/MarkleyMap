@@ -1,6 +1,6 @@
 # Markley 四面体浮雕地图
 
-本项目将全球地形与地表颜色数据重投影为 Markley 四面体地图，并生成一张高分辨率 PNG。当前主渲染脚本输出不带画布的地图主体，不添加 16:9 背景、暗角或边缘渐隐。
+本项目将全球地形与地表颜色数据重投影为 Markley 四面体地图，并生成一张高分辨率 PNG。
 
 ## 投影方法
 
@@ -57,6 +57,8 @@ python render-relief-natural-color.py
 
 最终图片为 **15360 × 6651** 像素。这里的“16K”指宽度约 16K；图片保留投影主体的长宽比，因此不是 15360 × 8640 的 16:9 壁纸画布。输出像素数不会增加上游地图数据中没有的细节。
 
+预生成的 16K PNG 通过本项目的 [GitHub Releases](https://github.com/MaiMaiiMaiii/MarkleyMap/releases) 分发，请前往 Releases 页面下载。
+
 | 文件 | 用途 |
 | --- | --- |
 | `download-relief-data.py` | 下载两个地图数据源 |
@@ -67,4 +69,4 @@ python render-relief-natural-color.py
 | `package.json`、`package-lock.json` | JavaScript 依赖清单；Python 主流程不需要运行 `npm install` |
 | `etopo.tif`、`land-color.zip` | 下载的原始地图数据；首次运行时由下载脚本获取，通常不提交到源码仓库 |
 | `relief-cache/` | 可重新生成的中间缓存 |
-| `markley-natural-color-16k.png` | 渲染生成的最终图片 |
+| `markley-natural-color-16k.png` | 本地渲染生成的图片；预生成发布版从 GitHub Releases 下载 |
